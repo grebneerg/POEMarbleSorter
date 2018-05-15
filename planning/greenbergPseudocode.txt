@@ -1,0 +1,23 @@
+motors and sensors:
+    marbleSensor: VEX line tracker
+    shooter: VEX 393 motor
+    dispensing motor: VEX 393 motor
+
+helper methods:
+    marblePresent: check that the color detected my marbleSensor is different than the usual color when a marble is absent
+    getMarbleColor: retrieve the color value of a marble at the sensor
+    dispense:
+        rotate dispenser until marblePresent is false
+        rotate dispenser until marblePresent is true
+
+main task:
+    repeat infinitely:
+        if a marble is present at the sensor:
+            get color of marble
+            if color is withing range a:
+                set shooter to high speed
+            otherwise if color is within range b:
+                set shooter to medium speed
+            otherwise:
+                set shooter to low speed
+        dispense new marble
