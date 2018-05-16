@@ -14,7 +14,7 @@ main task:
     repeat infinitely:
         if a marble is present at the sensor:
             get color of marble
-            if color is withing range a:
+            if color is within range a:
                 set shooter to high speed
             otherwise if color is within range b:
                 set shooter to medium speed
