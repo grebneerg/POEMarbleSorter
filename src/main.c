@@ -39,6 +39,7 @@ task main() {
 	for (;;) {
 		if (marblePresent()) {
 			int color = getMarbleColor();
+			delay(500);
 			if (aLower < color && color < aUpper) {
 				motor[shooter] = highSpeed;
 			} else if (bLower < color && color < bUpper) {
@@ -48,6 +49,5 @@ task main() {
 			}
 		}
 		dispense();
-		delay(1000);
 	}
 }
