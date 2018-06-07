@@ -51,6 +51,7 @@ const int medSpeed = -80; //TODO
 const int highSpeed = -80; //TODO
 
 task main() {
+	int num = 0;
 	for (;;) {
 		if (marblePresent()) {
 			int color = getMarbleColor();
@@ -68,9 +69,14 @@ task main() {
 			}
 			// delay(1500);
 			motor[servo] = 127; //TODO maybe change
-			delay(1000)
-
+			delay(1000);
+			num++;
 		}
+
+		if (num >= 10) {
+			break;
+		}
+
 		motor[servo] = -127;
 		delay(1000);
 		motor[servo] = 0;
