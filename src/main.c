@@ -82,7 +82,7 @@ task main() {
 
 		motor[servo] = -127;
 		delay(1000);
-		motor[servo] = 0;
+		motor[servo] = -10*;
 		delay(1000);
 		if (num >= 15) {
 			break;
